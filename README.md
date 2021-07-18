@@ -2,14 +2,24 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby v2.7.2
+- Ruby on Rails v6.0.3
+- RubyMine
+- GitHub
+- Heroku
+- PostgreSQL
+
+## Linters
+
+- Rubocop
+- Stylelint
 
 ## Live Demo
 
-TBA
+[Upcoming](#)
 
 
 ## Getting Started
@@ -18,9 +28,9 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Ruby: v2.7.2
+- Rails: v6.0.3 
+- Postgres: >=9.5
 
 ### Setup
 
@@ -71,7 +81,13 @@ TBA
 
 ## Authors
 
-TBA
+## 👨🏻‍💻 Kenny Ortega
+
+- GitHub: [kensayo](https://github.com/kensayo)
+- Twitter: [@kensayo](https://twitter.com/kensayo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kennyortega/)
+
+
 
 ## 🤝 Contributing
 
