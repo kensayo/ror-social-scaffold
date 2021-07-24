@@ -1,10 +1,15 @@
 <h1>Friend requests</h1>
-<h2>Invited Friends</h2>
-<% @invitations.each do |friend| %>
-  <%= friend.status %>
-<% end %>
-
 <h2>Accept Friends</h2>
 <% @request.each do |friend| %>
-  <%= friend.status %>
+
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title"><%= friend.user.name %></h3>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-success">Accept</button>
+        <button type="button" class="btn btn-danger">Reject</button>
+      </div>
+    </div>
+  </div>
+
 <% end %>
