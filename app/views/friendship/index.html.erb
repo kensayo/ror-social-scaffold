@@ -1,0 +1,10 @@
+<h1>Friend requests</h1>
+<h2>Invited Friends</h2>
+<% @invitations.each do |friend| %>
+  <%= friend.status %>
+<% end %>
+
+<h2>Accept Friends</h2>
+<% @request.each do |friend| %>
+  <%= friend.status %>
+<% end %>

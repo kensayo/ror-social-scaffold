@@ -6,4 +6,7 @@
       <%= render @posts %>
     </ul>
   </article>
+  <% if !current_user.friendships.requested?(@user.id)%>
+    <%= link_to 'Add friend', user_add_friend_path(@user), method: :post %>
+  <% end %>
 </section>

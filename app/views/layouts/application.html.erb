@@ -10,6 +10,7 @@
   <body>
     <nav class="nav">
       <%= link_to 'Stay in touch', root_path %>
+      <% if user_signed_in? %>
       <div class="menu">
         <div class="menu-item">
           <%= menu_link_to 'Timeline', posts_path %>
@@ -17,6 +18,10 @@
         <div class="menu-item">
           <%= menu_link_to 'All users', users_path %>
         </div>
+          <div class="menu-item">
+            <%= menu_link_to 'Friend Request', user_friend_request_path(current_user) %>
+          </div>
+        <% end %>
       </div>
       <% if current_user %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
