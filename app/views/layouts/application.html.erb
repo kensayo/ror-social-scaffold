@@ -17,6 +17,9 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
         <% if user_signed_in? %>
           <li class="nav-item">
+            <%= link_to current_user.name, users_path(current_user), class: 'nav-link fw-bold text-success' %>
+          </li>
+          <li class="nav-item">
             <%= link_to 'Timeline', posts_path, class: 'nav-link fw-bold' %>
           </li>
           <li class="nav-item">

@@ -2,12 +2,13 @@ class Friendship < ApplicationRecord
   belongs_to :user
   belongs_to :friend, class_name: 'User'
 
-  def self.requested?(request_id)
-    where(friend_id: request_id).exists?
-  end
-
-  def self.requested(request_id)
-    where(friend_id: request_id)
+  def self.requested?(request_id, my_friend)
+    if Friendship.where(user_id: request_id).where(friend_id: my_friend).exists?
+      return true
+    elsif Friendship.where(user_id: my_friend).where(friend_id: request_id).exists?
+      return true
+    end
+    false
   end
 
   def self.friends(request_id)
