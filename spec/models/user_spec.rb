@@ -28,5 +28,4 @@ RSpec.describe User, type: :model do
       expect(user1.pending_friends.count).to eq(1)
     end
   end
-
 end
