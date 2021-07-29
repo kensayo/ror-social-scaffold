@@ -8,6 +8,7 @@ class Friendship < ApplicationRecord
     elsif Friendship.where(user_id: my_friend).where(friend_id: request_id).exists?
       return true
     end
+
     false
   end
 
