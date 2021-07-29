@@ -20,7 +20,8 @@ class PostsController < ApplicationController
   private
 
   def timeline_posts
-    @timeline_posts ||= Post.where(user_id: [Friendship.friends(current_user.id)]).or(Post.where(user_id: current_user.id))
+    user_friends = Friendship.friends(current_user.id)
+    @timeline_posts = Post.where(user_id: [user_friends]).or(Post.where(user_id: current_user.id))
   end
 
   def post_params
